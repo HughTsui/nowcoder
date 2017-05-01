@@ -53,9 +53,6 @@ class ScrapyManager(object):
 			
 	def deploy(self):
 		print('start to deploy...')
-		with open('Program.zip','wb') as f:
-			f.write(requests.get('https://github.com/HughTsui/NowcoderSpider/archive/master.zip').content)
-		os.system('unzip -o Program.zip')
 		self.stop()
 		self.start()	
 		
