@@ -25,7 +25,7 @@ class ScrapyManager(object):
 		return sys.platform
 		
 	def connect(self):
-		client = redis.StrictRedis(host=self,HOST,port=6379,db=0)
+		client = redis.StrictRedis(host=self.HOST,port=6379,db=0)
 		return client
 		
 	def query(self):
