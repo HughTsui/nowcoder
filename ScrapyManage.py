@@ -60,7 +60,7 @@ class ScrapyManager(object):
 		self.stop()
 		self.start()	
 		
-if __name__='__main__':
+if __name__=='__main__':
 	scrapymanager = ScrapyManager()
 	
 		
