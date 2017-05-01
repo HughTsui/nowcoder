@@ -7,16 +7,17 @@ import requests
 import subprocess
 
 class ScrapyManager(object):
-	Host = '120.25.78.80'
+	HOST = '120.25.78.80'
 	RUN_SPIDER = 'python main.py'
 	
 	def __init__(self):
 		self.client = self.connect()
 		self.command_history = ''
 		self.process = None
-		self.command_dict = {'start':self.start,
-							 'stop':self.stop,
-							 'deploy':self.deploy
+		self.command_dict = {
+					'start':self.start,
+					'stop':self.stop,
+					'deploy':self.deploy
 							 }
 		self.query()
 		
