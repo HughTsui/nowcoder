@@ -54,9 +54,9 @@ class ScrapyManager(object):
 	def deploy(self):
 		print('start to deploy...')
 		with open('master.zip','wb') as f:
-			f.write(requests.get(' ')
+			f.write(requests.get('')
 		if self.platform.startswith('lin'):
-			os.system('unzip -o master.zip')
+			os.system('unzip -o nowcoder-master.zip')
 		self.stop()
 		self.start()	
 		
