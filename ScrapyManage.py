@@ -44,7 +44,7 @@ class ScrapyManager(object):
 		print('start...')
 		if self.process:
 			self.stop()
-		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='/root/nowcoder/nowcoder-master/now_coder')
+		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='now_coder')
 		
 	def stop(self):
 		print('stop...')
@@ -55,9 +55,7 @@ class ScrapyManager(object):
 	def deploy(self):
 		print('start to deploy...')
 		with open('nowcoder-master.zip','wb') as f:
-			f.write(requests.get('https://github.com/HughTsui/nowcoder/archive/master.zip').content)
-		if self.platform.startswith('lin'):
-			os.system('unzip -o nowcoder-master.zip')
+		
 		self.stop()
 		self.start()	
 		
