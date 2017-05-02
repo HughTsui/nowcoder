@@ -44,6 +44,7 @@ class ScrapyManager(object):
 		print('start...')
 		if self.process:
 			self.stop()
+		os.chdir("/root/nowcoder/now_coder")
 		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='now_coder')
 		
 	def stop(self):
@@ -54,7 +55,6 @@ class ScrapyManager(object):
 			
 	def deploy(self):
 		print('start to deploy...')
-		os.chdir("/root/nowcoder/now_coder")
 		self.stop()
 		self.start()	
 		
