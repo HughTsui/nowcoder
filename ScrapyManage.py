@@ -56,7 +56,7 @@ class ScrapyManager(object):
 		print('start to deploy...')
 		with open('nowcoder-master.zip','wb') as f:
 			f.write(requests.get('https://github.com/HughTsui/nowcoder/archive/master.zip').content)
-		if self.platform.startwith('lin'):
+		if self.platform.startswith('lin'):
 			os.system('unzip -o nowcoder-master.zip')
 		self.stop()
 		self.start()	
