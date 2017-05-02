@@ -44,7 +44,7 @@ class ScrapyManager(object):
 		print('start...')
 		if self.process:
 			self.stop()
-		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='now_coder-master')
+		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='nowcoder-master')
 		
 	def stop(self):
 		print('stop...')
