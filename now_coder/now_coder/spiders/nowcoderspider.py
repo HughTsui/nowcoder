@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf-8')
 
 class NowcoderspiderSpider(RedisSpider):
     name = "nowcoderspider"
-    redis_key = 'nowcoder'   #redis_key实际上就是一个变量名，之后爬虫爬到的所有URL都会保存到Redis中这个名为“spider:start_urls”的列表下面，爬虫同时也会从这个列表中读取后续页面的URL
+    redis_key = 'nowcoderspider'   #redis_key实际上就是一个变量名，之后爬虫爬到的所有URL都会保存到Redis中这个名为“spider:start_urls”的列表下面，爬虫同时也会从这个列表中读取后续页面的URL
     #start_urls = ['https://www.nowcoder.com/activity/oj/']
     url = 'http://www.nowcoder.com'    #self.url
 
