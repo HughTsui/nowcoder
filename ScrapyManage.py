@@ -54,8 +54,7 @@ class ScrapyManager(object):
 			
 	def deploy(self):
 		print('start to deploy...')
-		with open('nowcoder-master.zip','wb') as f:
-		
+		os.chdir("/root/nowcoder/now_coder")
 		self.stop()
 		self.start()	
 		
