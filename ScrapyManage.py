@@ -8,7 +8,7 @@ import subprocess
 
 class ScrapyManager(object):
 	HOST = '120.25.78.80'
-	RUN_SPIDER = 'scrapy crawl nowcoderspider'
+	RUN_SPIDER = 'python main.py'
 	
 	def __init__(self):
 		self.client = self.connect()
@@ -44,7 +44,8 @@ class ScrapyManager(object):
 		print('start...')
 		if self.process:
 			self.stop()
-		self.process = subprocess.Popen(self.RUN_SPIDER)
+		os.chdir("/root/nowcoder/now_coder")
+		self.process = subprocess.Popen(shlex.split(self.RUN_SPIDER),cwd='now_coder')
 		
 	def stop(self):
 		print('stop...')
