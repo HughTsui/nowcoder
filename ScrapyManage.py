@@ -45,7 +45,7 @@ class ScrapyManager(object):
 		if self.process:
 			self.stop()
 		os.chdir("/root/nowcoder/now_coder")
-		self.process = subprocess.Popen((self.RUN_SPIDER),cwd='now_coder')
+		self.process = subprocess.Popen(self.RUN_SPIDER)
 		
 	def stop(self):
 		print('stop...')
