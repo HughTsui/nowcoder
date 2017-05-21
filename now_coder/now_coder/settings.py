@@ -33,7 +33,7 @@ SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue' #爬虫调度�
 
 
 
-MONGODB_HOST = '120.25.78.80'#'127.0.0.1'
+MONGODB_HOST = '112.74.203.169'#'127.0.0.1'
 MONGODB_PORT = 27017
 MONGODB_DBNAME = 'NowcoderPromblemList'
 MONGODB_DOCNAME = 'PList_dis'
